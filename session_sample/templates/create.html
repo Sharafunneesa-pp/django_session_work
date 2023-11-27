@@ -1,0 +1,23 @@
+{%extends 'blank_layout.html' %}
+
+{% block content%}
+<h1>Create</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+{{frm.as_p }}
+
+
+
+    {% comment %} Title:
+    <input type="text" name="title"><br><br>
+    Year:
+    <input type="text" name="year"><br><br>
+    Summary:
+    <input type="text" name="summary"><br><br> {% endcomment %}
+
+
+    <button type="submit">SUBMIT</button> 
+
+</form>
+{% endblock content%}
